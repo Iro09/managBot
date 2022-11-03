@@ -108,7 +108,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="Repo ❤️",
-                url="https://github.com/rozari0/NezukoBot",
+                url="https://github.com/LaKsH-X/NezukoBot",
             ),
         ],
         [
@@ -142,7 +142,7 @@ keyboard = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="Repo 🛠",
-                url="https://github.com/rozari0/NezukoBot",
+                url="https://github.com/LaKsH-X/NezukoBot",
             ),
         ],
         [
@@ -159,7 +159,7 @@ keyboard = InlineKeyboardMarkup(
 async def start(_, message):
     if message.chat.type != enums.ChatType.PRIVATE:
         return await message.reply_photo(
-            photo="https://cdn.awwni.me/2gj9h.jpg",
+            photo="https://te.legra.ph/file/9570141ccd5db0a652132.jpg",
             caption="Pm Me For More Details.",
             reply_markup=keyboard,
         )
@@ -184,7 +184,7 @@ async def start(_, message):
             )
     else:
         await message.reply_photo(
-            photo="https://cdn.awwni.me/2gj9h.jpg",
+            photo="https://te.legra.ph/file/9570141ccd5db0a652132.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
         )
