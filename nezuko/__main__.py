@@ -302,8 +302,8 @@ async def help_button(client, query):
     )
 
 ɢᴇɴᴇʀᴀʟ ᴄᴏᴍᴍᴀɴᴅ  ʜᴇʀᴇ:
- ๏ /start: sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ
- ๏ /help: ɢɪᴠᴇ ᴛʜɪs ᴍᴇssᴀɢᴇ
+ - /start: sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ
+ - /help: ɢɪᴠᴇ ᴛʜɪs ᴍᴇssᴀɢᴇ
  """
     if mod_match:
         module = mod_match.group(1)
