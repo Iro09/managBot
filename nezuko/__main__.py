@@ -294,12 +294,12 @@ async def help_button(client, query):
     next_match = re.match(r"help_next\((.+?)\)", query.data)
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
-    top_text = (
-    f"ʜᴇʟʟᴏ {query.from_user.first_name}, ᴍʏ ɴᴀᴍᴇ ɪs  {BOT_NAME}."
-+ "ɪ'ᴍ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs."
-+ "You can choose an option below,ʏᴏᴜ ᴄᴀɴ ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴀ ʙᴜᴛᴛᴏɴ." 
-+ "ᴀʟsᴏ ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ᴇᴠᴇʀʏᴛʜɪɴɢ ɪɴ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ."
-    )
+    top_text = f"""
+ʜᴇʟʟᴏ {query.from_user.first_name}, ᴍʏ ɴᴀᴍᴇ ɪs  {BOT_NAME}.
+ɪ'ᴍ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs."
+You can choose an option below,ʏᴏᴜ ᴄᴀɴ ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴀ ʙᴜᴛᴛᴏɴ. 
+ᴀʟsᴏ ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ᴇᴠᴇʀʏᴛʜɪɴɢ ɪɴ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ.
+    
 
 ɢᴇɴᴇʀᴀʟ ᴄᴏᴍᴍᴀɴᴅ  ʜᴇʀᴇ:
  - /start: sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ
