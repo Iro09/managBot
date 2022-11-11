@@ -101,7 +101,7 @@ async def start_bot():
 
 PM_START_TEXT = """
 *ʜᴇʟʟᴏ {} !*
-✪ ɪ'ᴍ ʟᴀᴋsʜʏᴀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ [✨](https://te.legra.ph/file/ded640cc97e4d4c37cda0.jpg)
+✪ ɪ'ᴍ ʟᴀᴋsʜʏᴀ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ [✨](https://te.legra.ph/file/ded640cc97e4d4c37cda0.jpg)
 ────────────────────────
 × *ᴜᴘᴛɪᴍᴇ:* `{}`
 × `{}` *ᴜsᴇʀs, ᴀᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
