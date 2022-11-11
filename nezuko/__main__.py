@@ -99,27 +99,37 @@ async def start_bot():
         task.cancel()
     print("[INFO]: Turned off!")
 
+PM_START_TEXT = """
+*ʜᴇʟʟᴏ {} !*
+✪ ɪ'ᴍ ʟᴀᴋsʜʏᴀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ [✨](https://te.legra.ph/file/ded640cc97e4d4c37cda0.jpg)
+────────────────────────
+× *ᴜᴘᴛɪᴍᴇ:* `{}`
+× `{}` *ᴜsᴇʀs, ᴀᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
+────────────────────────
+✪ ʜɪᴛ /help ᴛᴏ sᴇᴇ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs.
+"""
+
 
 home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Commands ❓", callback_data="bot_commands"
+                text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
-                text="Repo ❤️",
+                text="ʀᴇᴘᴏ",
                 url="https://github.com/LaKsH-X/NezukoBot",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="System Stats 🖥",
+                text="sʏsᴛᴇᴍ sᴛᴀᴛᴜs",
                 callback_data="stats_callback",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="Add Me To Your Group⚡",
+                text="+ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ +",
                 url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
             )
         ],
@@ -127,9 +137,9 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-    f"Hey there! My name is {BOT_NAME}. I can manage your "
-    + "group with lots of useful features, feel free to "
-    + "add me to your group."
+    f"ʜᴇʏ! ᴛʜɪs ɪs  {BOT_NAME}."
+    + "๏ ᴀ ғᴀsᴛ ᴀɴᴅ ᴀᴅᴠᴀɴᴄᴇᴅ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ | sᴜᴘᴘᴏʀᴛ :-  @xSupport_ies."
+    + "๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs."
 )
 
 
@@ -137,17 +147,17 @@ keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Help ❓",
+                text="ʜᴇʟᴘ",
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="Repo 🛠",
+                text="ʀᴇᴘᴏ",
                 url="https://github.com/LaKsH-X/NezukoBot",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="System Stats 💻",
+                text="sʏsᴛᴇᴍ sᴛᴀᴛᴜs",
                 callback_data="stats_callback",
             ),
         ],
@@ -159,7 +169,7 @@ keyboard = InlineKeyboardMarkup(
 async def start(_, message):
     if message.chat.type != enums.ChatType.PRIVATE:
         return await message.reply_photo(
-            photo="https://te.legra.ph/file/74fd07256fd67a665ed2f.jpg",
+            photo="https://te.legra.ph/file/ded640cc97e4d4c37cda0.jpg",
             caption="Pm Me For More Details.",
             reply_markup=keyboard,
         )
@@ -184,7 +194,7 @@ async def start(_, message):
             )
     else:
         await message.reply_photo(
-            photo="https://te.legra.ph/file/74fd07256fd67a665ed2f.jpg",
+            photo="https://te.legra.ph/file/ded640cc97e4d4c37cda0.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
         )
@@ -201,29 +211,29 @@ async def help_command(_, message):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Click here",
+                                text="ᴄʟɪᴄᴋ ʜᴇʀᴇ",
                                 url=f"t.me/{BOT_USERNAME}?start=help_{name}",
                             )
                         ],
                     ]
                 )
                 await message.reply(
-                    f"Click on the below button to get help about {name}",
+                    f"ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ᴀʙᴏᴜᴛ  {name}",
                     reply_markup=key,
                 )
             else:
                 await message.reply(
-                    "PM Me For More Details.", reply_markup=keyboard
+                    "ᴘᴍ ᴍᴇ ғᴏʀ ᴍᴏʀᴇ ᴅᴇᴛᴀɪʟs.", reply_markup=keyboard
                 )
         else:
             await message.reply(
-                "Pm Me For More Details.", reply_markup=keyboard
+                "ᴘᴍ ᴍᴇ ғᴏʀ ᴍᴏʀᴇ ᴅᴇᴛᴀɪʟs.", reply_markup=keyboard
             )
     elif len(message.command) >= 2:
         name = (message.text.split(None, 1)[1]).lower()
         if str(name) in HELPABLE:
             text = (
-                f"Here is the help for **{HELPABLE[name].__MODULE__}**:\n"
+                f"*ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ*{HELPABLE[name].__MODULE__}**:\n"
                 + HELPABLE[name].__HELP__
             )
             await message.reply(text, disable_web_page_preview=True)
@@ -248,10 +258,9 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name}, My name is {bot_name}.
-I'm a group management bot with some useful features.
-You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
+        """ʜᴇʟʟᴏ {first_name}, ᴍʏ ɴᴀᴍᴇ ɪs {bot_name}.
+ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ᴀʙᴏᴜᴛ sᴘᴇᴄɪғɪᴄs ᴄᴏᴍᴍᴀɴᴅ."""
+.
 """.format(
             first_name=name,
             bot_name=BOT_NAME,
@@ -287,14 +296,14 @@ async def help_button(client, query):
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
-Hello {query.from_user.first_name}, My name is {BOT_NAME}.
-I'm a group management bot with some usefule features.
-You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
+๏ ʜᴇʟʟᴏ {query.from_user.first_name}, ᴍʏ ɴᴀᴍᴇ ɪs  {BOT_NAME}.
+๏ ɪ'ᴍ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
+๏ You can choose an option below,ʏᴏᴜ ᴄᴀɴ ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴀ ʙᴜᴛᴛᴏɴ. 
+๏ ᴀʟsᴏ ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ᴇᴠᴇʀʏᴛʜɪɴɢ ɪɴ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ.
 
-General command are:
- - /start: Start the bot
- - /help: Give this message
+ɢᴇɴᴇʀᴀʟ ᴄᴏᴍᴍᴀɴᴅ  ʜᴇʀᴇ:
+ ๏ /start: sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ
+ ๏ /help: ɢɪᴠᴇ ᴛʜɪs ᴍᴇssᴀɢᴇ
  """
     if mod_match:
         module = mod_match.group(1)
