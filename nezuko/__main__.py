@@ -101,7 +101,7 @@ async def start_bot():
 
 PM_START_TEXT = """
 *ʜᴇʟʟᴏ {} !*
-✪ ɪ'ᴍ ʟᴀᴋsʜʏᴀ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ [✨](https://te.legra.ph/file/ded640cc97e4d4c37cda0.jpg)
+✪ ɪ'ᴍ ʟᴀᴋsʜʏᴀ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ [✨](https://te.legra.ph/file/e07a4525b3d880888ef8d.jpg)
 ────────────────────────
 × *ᴜᴘᴛɪᴍᴇ:* `{}`
 × `{}` *ᴜsᴇʀs, ᴀᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
@@ -118,7 +118,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="ʀᴇᴘᴏ",
-                url="https://github.com/LaKsH-X/NezukoBot",
+                url="https://github.com/LaKsH-X/AnnuBot",
             ),
         ],
         [
@@ -152,7 +152,7 @@ keyboard = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="ʀᴇᴘᴏ",
-                url="https://github.com/LaKsH-X/NezukoBot",
+                url="https://github.com/LaKsH-X/AnnuBot",
             ),
         ],
         [
@@ -169,7 +169,7 @@ keyboard = InlineKeyboardMarkup(
 async def start(_, message):
     if message.chat.type != enums.ChatType.PRIVATE:
         return await message.reply_photo(
-            photo="https://te.legra.ph/file/ded640cc97e4d4c37cda0.jpg",
+            photo="https://te.legra.ph/file/e07a4525b3d880888ef8d.jpg",
             caption="Pm Me For More Details.",
             reply_markup=keyboard,
         )
@@ -194,7 +194,7 @@ async def start(_, message):
             )
     else:
         await message.reply_photo(
-            photo="https://te.legra.ph/file/ded640cc97e4d4c37cda0.jpg",
+            photo="https://te.legra.ph/file/e07a4525b3d880888ef8d.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
         )
@@ -296,7 +296,7 @@ async def help_button(client, query):
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
 ʜᴇʟʟᴏ {query.from_user.first_name}, ᴍʏ ɴᴀᴍᴇ ɪs  {BOT_NAME}.
-ɪ'ᴍ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs."
+ɪ'ᴍ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
 You can choose an option below,ʏᴏᴜ ᴄᴀɴ ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴀ ʙᴜᴛᴛᴏɴ. 
 ᴀʟsᴏ ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ᴇᴠᴇʀʏᴛʜɪɴɢ ɪɴ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ.
     
