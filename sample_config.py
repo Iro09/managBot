@@ -18,5 +18,5 @@ ARQ_API_URL = environ.get("ARQ_API_URL", "https://thearq.tech")
 ARQ_API_KEY = environ.get("ARQ_API_KEY", "LIIHRD-ISXROY-VOVFUG-OVJWDL-ARQ")
 RSS_DELAY = int(environ.get("RSS_DELAY", "300"))
 UPSTREAM_REPO = environ.get(
-    "UPSTREAM_REPO", "https://github.com/rozari0/NezukoBot.git"
+    "UPSTREAM_REPO", "https://github.com/Lakshyaxdz/AnnuBot.git"
 )
